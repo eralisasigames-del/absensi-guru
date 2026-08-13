@@ -1,2 +1,0 @@
-"use client"; import * as XLSX from "xlsx";
-export default function ExportButton({rows}:{rows:any[]}){function go(){const data=rows.map(r=>({Guru:r.profiles?.nama||"",Tanggal:r.tanggal,Hadir:r.jam_hadir?new Date(r.jam_hadir).toLocaleString("id-ID"):"",Pulang:r.jam_pulang?new Date(r.jam_pulang).toLocaleString("id-ID"):""}));const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(data),"Absensi");XLSX.writeFile(wb,"laporan-absensi.xlsx")}return <button onClick={go} className="rounded-xl bg-slate-900 text-white px-4 py-2">Export Excel</button>}
