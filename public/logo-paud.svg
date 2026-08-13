@@ -1,0 +1,19 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="32" y1="24" x2="208" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="108" fill="url(#g)"/>
+  <circle cx="120" cy="120" r="91" fill="white" fill-opacity="0.96"/>
+  <path d="M68 92C68 74.327 82.327 60 100 60H140C157.673 60 172 74.327 172 92V136C172 153.673 157.673 168 140 168H100C82.327 168 68 153.673 68 136V92Z" fill="#ECFDF5"/>
+  <circle cx="120" cy="88" r="20" fill="#10B981"/>
+  <circle cx="113" cy="85" r="3.5" fill="white"/>
+  <circle cx="127" cy="85" r="3.5" fill="white"/>
+  <path d="M111 96C115 100 125 100 129 96" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M86 132C86 121 94.954 112 106 112H134C145.046 112 154 121 154 132V153H86V132Z" fill="#059669"/>
+  <path d="M94 132L120 116L146 132" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M104 151V137H136V151" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+  <text x="120" y="195" text-anchor="middle" fill="#047857" font-family="Arial, sans-serif" font-size="18" font-weight="800">PAUD</text>
+</svg>
