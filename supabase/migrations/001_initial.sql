@@ -59,6 +59,14 @@ alter table public.attendance enable row level security;
 alter table public.leave_types enable row level security;
 alter table public.leave_requests enable row level security;
 
+-- Supabase RLS policies control which rows users may access, while GRANTs
+-- control whether the authenticated role may access each table at all.
+grant usage on schema public to authenticated;
+grant select, insert, update, delete on public.profiles to authenticated;
+grant select, insert, update on public.attendance to authenticated;
+grant select on public.leave_types to authenticated;
+grant select, insert, update on public.leave_requests to authenticated;
+
 create or replace function public.is_kepala()
 returns boolean language sql stable security definer set search_path=public
 as $$ select exists(select 1 from public.profiles where id=auth.uid() and role='kepala_sekolah' and status='aktif') $$;
