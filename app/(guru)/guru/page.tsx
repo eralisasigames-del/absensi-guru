@@ -60,7 +60,7 @@ export default async function GuruPage() {
 
         <AttendanceActions />
 
-        <section className="mt-6 grid gap-5 md:grid-cols-3">
+        <section className="mt-6 grid gap-5 md:grid-cols-4">
           <a href="/guru/riwayat" className="group rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:ring-emerald-300">
             <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-2xl">📋</div>
             <h2 className="font-black text-slate-900">Riwayat Absensi</h2>
@@ -72,6 +72,12 @@ export default async function GuruPage() {
             <h2 className="font-black text-slate-900">Izin / Cuti</h2>
             <p className="mt-2 text-sm text-slate-500">Ajukan cuti sakit, hamil, tahunan, atau keperluan lainnya.</p>
             <span className="mt-4 inline-block text-sm font-bold text-amber-600 group-hover:underline">Buat pengajuan →</span>
+          </a>
+          <a href="/guru/pengaturan" className="group rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:ring-emerald-300">
+            <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-violet-50 text-2xl">🔐</div>
+            <h2 className="font-black text-slate-900">Pengaturan Akun</h2>
+            <p className="mt-2 text-sm text-slate-500">Ubah password sementara menjadi password pribadi.</p>
+            <span className="mt-4 inline-block text-sm font-bold text-violet-600 group-hover:underline">Ubah password →</span>
           </a>
           <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
             <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-2xl">📅</div>
