@@ -52,7 +52,11 @@ export async function POST(request: Request) {
 
     const admin = createAdminClient();
     const temporaryPassword = generateTemporaryPassword();
-    const username = nama;
+
+    // Email digunakan sebagai username login agar guru menerima satu kredensial
+    // yang jelas dan sama dengan alamat email yang didaftarkan.
+    const username = email;
+
     const today = new Intl.DateTimeFormat("en-CA", {
       timeZone: "Asia/Jakarta",
       year: "numeric",
