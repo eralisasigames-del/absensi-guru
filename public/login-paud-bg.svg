@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68c8f5"/><stop offset="1" stop-color="#e9f9ff"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9edc0"/><stop offset="1" stop-color="#7fd68b"/></linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff5d8"/><stop offset="1" stop-color="#ffe5a8"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1390" cy="130" r="78" fill="#ffe34f"/>
+  <g stroke="#ffe34f" stroke-width="18" stroke-linecap="round"><path d="M1390 20v-45M1390 285v45M1280 130h-45M1500 130h45M1312 52l-32-32M1468 208l32 32M1468 52l32-32M1312 208l-32 32"/></g>
+  <g fill="#fff" opacity=".82" filter="url(#soft)"><ellipse cx="360" cy="210" rx="130" ry="50"/><ellipse cx="1080" cy="160" rx="150" ry="55"/><ellipse cx="820" cy="300" rx="95" ry="38"/></g>
+  <path d="M0 790 C240 680 430 720 620 800 C850 900 1110 700 1600 760 L1600 1000 L0 1000Z" fill="url(#ground)"/>
+  <g>
+    <path d="M100 420 Q145 230 250 80 L315 95 Q230 280 205 465Z" fill="#8c542e"/>
+    <circle cx="155" cy="120" r="125" fill="#6dbb3f"/><circle cx="275" cy="110" r="120" fill="#83cc45"/><circle cx="235" cy="210" r="115" fill="#69b83c"/><circle cx="75" cy="230" r="95" fill="#5ead38"/>
+  </g>
+  <g transform="translate(1000 430)">
+    <rect x="0" y="155" width="480" height="330" rx="8" fill="url(#wall)" stroke="#e5c779" stroke-width="6"/>
+    <path d="M-35 175 L240 0 L515 175Z" fill="#f15c45" stroke="#d64b38" stroke-width="8"/>
+    <path d="M40 170 L240 45 L440 170Z" fill="#ffe9b0"/>
+    <rect x="205" y="300" width="70" height="185" rx="6" fill="#7fc6e7" stroke="#4b8faf" stroke-width="6"/>
+    <rect x="70" y="245" width="95" height="80" fill="#8ed6ef" stroke="#4b8faf" stroke-width="6"/><rect x="315" y="245" width="95" height="80" fill="#8ed6ef" stroke="#4b8faf" stroke-width="6"/>
+    <rect x="105" y="345" width="270" height="75" rx="8" fill="#fff" stroke="#d9c78c" stroke-width="5"/>
+    <text x="240" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#123a68">PAUD</text>
+    <g stroke="#e22f2f" stroke-width="7"><path d="M400 155V35"/><path d="M400 35h100v65H400"/></g><path d="M400 35h100v65H400Z" fill="#fff" opacity=".85"/>
+  </g>
+  <g transform="translate(1260 745)"><rect x="0" y="80" width="170" height="22" rx="10" fill="#7c4a2a"/><path d="M20 80 Q85 -5 150 80Z" fill="#ff8b45"/><rect x="52" y="-5" width="66" height="95" rx="16" fill="#7bd2ef"/></g>
+  <g transform="translate(125 735)"><circle cx="0" cy="0" r="42" fill="#ffd0a6"/><path d="M-42 -5 Q0 -65 42 -5 Q22 -25 -5 -12 Q-30 -25 -42 -5" fill="#5a3424"/><path d="M-45 45 Q0 10 45 45 L60 150 H-60Z" fill="#fff"/><path d="M-50 60 L-80 105" stroke="#ffd0a6" stroke-width="22" stroke-linecap="round"/><path d="M50 60 L80 105" stroke="#ffd0a6" stroke-width="22" stroke-linecap="round"/><path d="M-25 145 L-45 205" stroke="#154b9b" stroke-width="25" stroke-linecap="round"/><path d="M25 145 L45 205" stroke="#154b9b" stroke-width="25" stroke-linecap="round"/><path d="M-52 210h25M35 210h25" stroke="#fff" stroke-width="16" stroke-linecap="round"/></g>
+  <g transform="translate(320 775)"><circle cx="0" cy="0" r="39" fill="#ffd0a6"/><path d="M-40 -3 Q0 -65 40 -3 Q15 -25 -10 -12 Q-30 -22 -40 -3" fill="#6b3c27"/><path d="M-44 43 Q0 8 44 43 L58 145 H-58Z" fill="#ef5a72"/><path d="M-48 55 L-82 105" stroke="#ffd0a6" stroke-width="21" stroke-linecap="round"/><path d="M48 55 L78 95" stroke="#ffd0a6" stroke-width="21" stroke-linecap="round"/><path d="M-25 140 L-42 200" stroke="#254fbd" stroke-width="24" stroke-linecap="round"/><path d="M25 140 L45 200" stroke="#254fbd" stroke-width="24" stroke-linecap="round"/><path d="M-50 205h25M35 205h25" stroke="#fff" stroke-width="15" stroke-linecap="round"/></g>
+  <g opacity=".9"><circle cx="1540" cy="860" r="25" fill="#ff8c3a"/><circle cx="1490" cy="905" r="18" fill="#ffca3a"/><circle cx="90" cy="900" r="20" fill="#ff7b55"/><circle cx="210" cy="920" r="17" fill="#ffd34e"/></g>
+</svg>
