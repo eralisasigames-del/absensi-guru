@@ -1,5 +1,6 @@
 import { requireUser } from "@/lib/auth";
 import LogoutButton from "@/components/logout-button";
+import KepalaTambahGuruButton from "@/components/kepala-tambah-guru-button";
 
 function todayJakarta() {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Jakarta", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
@@ -32,22 +33,21 @@ export default async function Kepala() {
   const hadirCount = presentIds.size;
   const belumHadir = Math.max(activeTeachers.length - hadirCount, 0);
   const attendanceRate = activeTeachers.length ? Math.round((hadirCount / activeTeachers.length) * 100) : 0;
-  const navItems = [
-    { href: "/kepala", label: "Dashboard", icon: "⌂", active: true },
-    { href: "/kepala/guru", label: "Data Guru", icon: "♟" },
-    { href: "/kepala/pengajuan", label: "Pengajuan", icon: "✓" },
-    { href: "/kepala/laporan", label: "Laporan", icon: "▣" },
-  ];
 
   return <main className="min-h-screen bg-[#f7faf9] text-slate-900"><div className="flex min-h-screen flex-col lg:flex-row">
     <aside className="w-full border-b border-slate-200 bg-white lg:sticky lg:top-0 lg:h-screen lg:w-[260px] lg:shrink-0 lg:border-b-0 lg:border-r"><div className="flex h-full flex-col px-4 py-5 lg:px-5 lg:py-6">
       <div className="flex items-center gap-3 px-2"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-emerald-50 text-2xl ring-1 ring-emerald-100">👥</div><div><p className="text-[15px] font-black leading-tight">Absensi Guru PAUD</p><p className="mt-1 text-xs text-slate-500">PAUD Pencarsari</p></div></div>
-      <nav className="mt-6 flex gap-1 overflow-x-auto pb-1 lg:block lg:space-y-1 lg:overflow-visible">{navItems.map((item) => <a key={item.href} href={item.href} className={`flex min-w-max items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold transition ${item.active ? "bg-emerald-50 text-emerald-700" : "text-slate-600 hover:bg-slate-50 hover:text-emerald-700"}`}><span className="grid h-7 w-7 place-items-center text-lg">{item.icon}</span>{item.label}</a>)}</nav>
+      <nav className="mt-6 flex gap-1 overflow-x-auto pb-1 lg:block lg:space-y-1 lg:overflow-visible">
+        <a href="/kepala" className="flex min-w-max items-center gap-3 rounded-xl bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><span className="grid h-7 w-7 place-items-center text-lg">⌂</span>Dashboard</a>
+        <a href="/kepala/guru" className="flex min-w-max items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 hover:text-emerald-700"><span className="grid h-7 w-7 place-items-center text-lg">♟</span>Data Guru</a>
+        <a href="/kepala/pengajuan" className="flex min-w-max items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 hover:text-emerald-700"><span className="grid h-7 w-7 place-items-center text-lg">✓</span>Pengajuan</a>
+        <a href="/kepala/laporan" className="flex min-w-max items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 hover:text-emerald-700"><span className="grid h-7 w-7 place-items-center text-lg">▣</span>Laporan</a>
+      </nav>
       <div className="mt-auto hidden border-t border-slate-100 pt-5 lg:block"><div className="mb-4 flex items-center gap-3 px-2"><div className="grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-xs font-black text-slate-600">{initials(profile.nama || "KS")}</div><div className="min-w-0"><p className="truncate text-sm font-bold">{profile.nama}</p><p className="text-xs text-slate-500">Kepala Sekolah</p></div></div><LogoutButton /></div>
     </div></aside>
 
     <section className="min-w-0 flex-1"><div className="mx-auto max-w-[1450px] px-4 py-5 sm:px-6 lg:px-9 lg:py-7">
-      <header className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div><p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Dashboard Kepala Sekolah</p><h1 className="mt-1 text-3xl font-black tracking-tight sm:text-4xl">Monitoring Hari Ini</h1><p className="mt-1 text-sm text-slate-500">{formatDate(tanggal)}</p></div><div className="flex gap-2"><a href="/kepala/guru" className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700"><span className="text-lg leading-none">+</span>Tambah Guru</a><div className="lg:hidden"><LogoutButton /></div></div></header>
+      <header className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div><p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Dashboard Kepala Sekolah</p><h1 className="mt-1 text-3xl font-black tracking-tight sm:text-4xl">Monitoring Hari Ini</h1><p className="mt-1 text-sm text-slate-500">{formatDate(tanggal)}</p></div><div className="flex gap-2"><KepalaTambahGuruButton /><div className="lg:hidden"><LogoutButton /></div></div></header>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"><div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p className="text-sm text-slate-500">Guru Aktif</p><p className="mt-2 text-3xl font-black">{activeTeachers.length}</p><p className="mt-2 text-xs font-semibold text-emerald-600">Guru terdaftar aktif</p></div><div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p className="text-sm text-slate-500">Hadir Hari Ini</p><p className="mt-2 text-3xl font-black text-emerald-700">{hadirCount}</p><p className="mt-2 text-xs font-semibold text-slate-500">Kehadiran {attendanceRate}%</p></div><div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p className="text-sm text-slate-500">Belum Hadir</p><p className="mt-2 text-3xl font-black text-amber-600">{belumHadir}</p><p className="mt-2 text-xs font-semibold text-slate-500">Perlu dipantau hari ini</p></div><div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p className="text-sm text-slate-500">Menunggu Approval</p><p className="mt-2 text-3xl font-black text-blue-700">{pendingCount}</p><a href="/kepala/pengajuan" className="mt-2 inline-block text-xs font-bold text-blue-600 hover:underline">Review pengajuan →</a></div></section>
 
