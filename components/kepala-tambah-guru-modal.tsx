@@ -69,7 +69,7 @@ export default function KepalaTambahGuruModal({ open, onClose, onCreated }: Prop
       const credentials: Credentials = {
         nama: result.guru?.nama ?? form.nama,
         whatsapp: result.guru?.nomor_whatsapp ?? normalizeWhatsApp(form.nomor_whatsapp),
-        username: result.credentials?.username ?? result.guru?.username ?? form.nama,
+        username: result.credentials?.username ?? result.guru?.username ?? form.email,
         password: result.credentials?.password ?? "",
       };
 
@@ -114,8 +114,9 @@ export default function KepalaTambahGuruModal({ open, onClose, onCreated }: Prop
                   <input id="tambah-guru-nama" name="nama" required autoComplete="name" placeholder="Contoh: Walid" value={form.nama} onChange={(event) => setForm({ ...form, nama: event.target.value })} className="mt-1.5 h-12 w-full rounded-xl border border-slate-300 px-4 font-normal text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100" />
                 </label>
                 <label className="text-sm font-bold text-slate-800">
-                  Email
+                  Email / Username Login
                   <input id="tambah-guru-email" name="email" required type="email" autoComplete="email" placeholder="guru@gmail.com" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} className="mt-1.5 h-12 w-full rounded-xl border border-slate-300 px-4 font-normal text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100" />
+                  <span className="mt-1 block text-xs font-normal text-slate-400">Email ini juga menjadi username untuk login.</span>
                 </label>
                 <label className="text-sm font-bold text-slate-800">
                   Nomor WhatsApp
@@ -132,8 +133,8 @@ export default function KepalaTambahGuruModal({ open, onClose, onCreated }: Prop
                 <div className="flex gap-3">
                   <span className="mt-0.5 text-xl text-emerald-700">🛡</span>
                   <div>
-                    <p className="text-sm font-bold text-emerald-800">Akun guru akan dibuat dengan username otomatis</p>
-                    <p className="mt-1 text-xs leading-5 text-emerald-700">Password sementara akan dikirim ke nomor WhatsApp guru</p>
+                    <p className="text-sm font-bold text-emerald-800">Email menjadi username login</p>
+                    <p className="mt-1 text-xs leading-5 text-emerald-700">Password sementara dibuat otomatis dan bisa dikirim langsung melalui WhatsApp setelah akun berhasil dibuat.</p>
                   </div>
                 </div>
               </div>
