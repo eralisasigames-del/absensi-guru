@@ -55,7 +55,6 @@ export default function LoginPage() {
       return;
     }
 
-    // The preference is intentionally kept local; Supabase still manages the session securely.
     if (remember) localStorage.setItem("paud_remember_login", "1");
     else localStorage.removeItem("paud_remember_login");
 
@@ -63,71 +62,66 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-sky-200 via-sky-100 to-emerald-100 px-4 py-8 sm:px-6">
-      {/* Decorative sky */}
+    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-sky-300 via-sky-100 to-emerald-200 px-4 py-6 sm:px-6">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-16 -top-20 h-56 w-56 rounded-full bg-emerald-300/35 blur-2xl" />
-        <div className="absolute right-10 top-8 h-28 w-28 rounded-full bg-yellow-300/80 shadow-[0_0_60px_rgba(250,204,21,.45)]" />
-        <div className="absolute left-[8%] top-28 h-12 w-28 rounded-full bg-white/70 blur-sm" />
-        <div className="absolute right-[10%] top-48 h-10 w-24 rounded-full bg-white/70 blur-sm" />
-        <div className="absolute bottom-0 left-0 h-44 w-full bg-gradient-to-t from-emerald-300/70 to-transparent" />
-        <div className="absolute bottom-0 left-0 h-3 w-full bg-emerald-500/70" />
+        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-emerald-300/40 blur-3xl" />
+        <div className="absolute -right-16 top-7 h-36 w-36 rounded-full bg-yellow-300/90 shadow-[0_0_80px_rgba(250,204,21,.55)]" />
+        <div className="absolute left-[12%] top-28 h-16 w-36 rounded-full bg-white/75 blur-sm" />
+        <div className="absolute right-[15%] top-32 h-12 w-28 rounded-full bg-white/70 blur-sm" />
+        <div className="absolute bottom-0 left-0 h-56 w-full bg-gradient-to-t from-emerald-300/80 to-transparent" />
       </div>
 
-      {/* Friendly background trees */}
-      <div className="pointer-events-none absolute bottom-10 left-[-20px] hidden sm:block">
-        <div className="h-28 w-28 rounded-full bg-emerald-500/75 shadow-[35px_12px_0_8px_rgba(34,197,94,.6),65px_-12px_0_4px_rgba(74,222,128,.55)]" />
-        <div className="mx-auto h-32 w-7 rounded-full bg-amber-800/70" />
+      <div className="pointer-events-none absolute bottom-0 left-[-30px] hidden sm:block">
+        <div className="h-36 w-36 rounded-full bg-emerald-500/80 shadow-[42px_8px_0_8px_rgba(34,197,94,.65),76px_-18px_0_4px_rgba(74,222,128,.65)]" />
+        <div className="mx-auto h-36 w-8 rounded-full bg-amber-800/75" />
       </div>
-      <div className="pointer-events-none absolute bottom-0 right-[-20px] hidden sm:block">
-        <div className="h-32 w-32 rounded-full bg-emerald-500/75 shadow-[-35px_5px_0_8px_rgba(34,197,94,.6),-70px_-18px_0_4px_rgba(74,222,128,.55)]" />
-        <div className="mx-auto h-36 w-8 rounded-full bg-amber-800/70" />
+      <div className="pointer-events-none absolute bottom-0 right-[-30px] hidden sm:block">
+        <div className="h-36 w-36 rounded-full bg-emerald-500/80 shadow-[-42px_8px_0_8px_rgba(34,197,94,.65),-76px_-18px_0_4px_rgba(74,222,128,.65)]" />
+        <div className="mx-auto h-36 w-8 rounded-full bg-amber-800/75" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center justify-center">
-        <div className="grid w-full items-center gap-8 lg:grid-cols-[1fr_520px_1fr]">
-          {/* Left message */}
-          <div className="hidden text-center lg:block">
-            <div className="mx-auto max-w-xs rounded-3xl bg-white/55 p-7 backdrop-blur-sm">
-              <div className="text-3xl font-black leading-tight text-blue-900">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-3rem)] max-w-7xl items-center justify-center">
+        <div className="grid w-full items-center gap-7 lg:grid-cols-[1fr_600px_1fr]">
+          <div className="hidden lg:block">
+            <div className="mx-auto max-w-sm px-4 text-center">
+              <div className="text-4xl font-black leading-tight tracking-tight text-blue-950">
                 “Disiplin hari ini,
                 <br />
                 prestasi esok hari.”
               </div>
-              <div className="mx-auto mt-5 h-2 w-32 rounded-full bg-yellow-400" />
-              <div className="mt-6 flex justify-center gap-3 text-5xl" aria-hidden="true">
+              <div className="mx-auto mt-5 h-2 w-40 rounded-full bg-yellow-400 shadow-sm" />
+              <div className="mt-7 flex justify-center gap-3 text-6xl" aria-hidden="true">
                 <span>🧒</span><span>👧</span>
               </div>
             </div>
           </div>
 
-          {/* Login card */}
-          <section className="w-full rounded-[2rem] border border-white/80 bg-white/95 p-6 shadow-[0_25px_70px_rgba(15,67,76,.18)] backdrop-blur-xl sm:p-9">
+          <section className="w-full rounded-[2.5rem] border border-white/90 bg-white/95 p-6 shadow-[0_30px_90px_rgba(15,67,76,.22)] backdrop-blur-xl sm:p-10">
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-28 w-28 items-center justify-center rounded-full bg-yellow-50 shadow-inner ring-8 ring-yellow-100/70">
+              <div className="mx-auto mb-5 flex h-40 w-40 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_8px_30px_rgba(15,23,42,.12)] ring-8 ring-yellow-100/80 sm:h-44 sm:w-44">
                 <img
-                  src="/logo-paud-pencarsari.svg"
+                  src="/logo-paud-pencarsari.jpeg"
                   alt="Logo PAUD Pencarsari"
-                  className="h-28 w-28 object-contain"
+                  className="h-full w-full object-contain"
                 />
               </div>
-              <h1 className="text-3xl font-black tracking-tight text-blue-950 sm:text-[2.15rem]">
+              <h1 className="text-3xl font-black tracking-tight text-blue-950 sm:text-[2.35rem]">
                 Absensi PAUD Pencarsari
               </h1>
-              <p className="mt-2 text-base text-slate-500">
+              <p className="mt-2 text-base text-slate-500 sm:text-lg">
                 Sistem Absensi Guru &amp; Kepala Sekolah
               </p>
-              <div className="mx-auto mt-5 flex max-w-64 gap-2">
+              <div className="mx-auto mt-5 flex max-w-72 gap-2">
                 <span className="h-1.5 flex-1 rounded-full bg-blue-500" />
                 <span className="h-1.5 flex-1 rounded-full bg-yellow-400" />
                 <span className="h-1.5 flex-1 rounded-full bg-emerald-500" />
               </div>
             </div>
 
-            <form onSubmit={submit} className="mt-7 space-y-4">
+            <form onSubmit={submit} className="mt-8 space-y-4">
               <label className="relative block">
                 <span className="sr-only">Email / akun login</span>
-                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-blue-900">✉</span>
+                <span className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-2xl text-blue-950">✉</span>
                 <input
                   required
                   type="email"
@@ -141,7 +135,7 @@ export default function LoginPage() {
 
               <label className="relative block">
                 <span className="sr-only">Password</span>
-                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-blue-900">♙</span>
+                <span className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-2xl text-blue-950">♙</span>
                 <input
                   required
                   type={showPassword ? "text" : "password"}
@@ -161,7 +155,7 @@ export default function LoginPage() {
                 </button>
               </label>
 
-              <div className="flex items-center justify-between px-1 text-sm">
+              <div className="flex items-center justify-between px-1 text-sm sm:text-base">
                 <label className="flex cursor-pointer items-center gap-2 text-slate-600">
                   <input
                     type="checkbox"
@@ -207,24 +201,16 @@ export default function LoginPage() {
             </p>
           </section>
 
-          {/* Right school card */}
           <div className="hidden lg:block">
-            <div className="mx-auto max-w-xs rounded-[2rem] border border-white/70 bg-white/55 p-5 text-center shadow-lg backdrop-blur-sm">
-              <div className="relative mx-auto h-44 overflow-hidden rounded-3xl bg-gradient-to-b from-sky-300 to-sky-100">
-                <div className="absolute left-5 top-5 h-9 w-20 rounded-full bg-white/80" />
-                <div className="absolute right-5 top-9 h-7 w-16 rounded-full bg-white/80" />
-                <div className="absolute bottom-0 left-0 h-20 w-full bg-emerald-300" />
-                <div className="absolute bottom-7 left-1/2 h-24 w-36 -translate-x-1/2 rounded-t-2xl bg-amber-200 shadow-inner">
-                  <div className="absolute -top-5 left-[-8px] h-8 w-[152px] rounded-t-2xl bg-rose-400" />
-                  <div className="absolute bottom-0 left-1/2 h-12 w-10 -translate-x-1/2 rounded-t-lg bg-blue-300" />
-                  <div className="absolute left-3 top-8 h-7 w-7 rounded bg-white" />
-                  <div className="absolute right-3 top-8 h-7 w-7 rounded bg-white" />
-                </div>
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-white px-3 py-1 text-xs font-black text-blue-900 shadow">
-                  PAUD PENCARSARI
-                </div>
+            <div className="mx-auto max-w-sm rounded-[2rem] border border-white/70 bg-white/55 p-5 text-center shadow-lg backdrop-blur-sm">
+              <div className="overflow-hidden rounded-3xl bg-white/80 p-5 shadow-inner">
+                <img
+                  src="/logo-paud-pencarsari.jpeg"
+                  alt="PAUD Pencarsari"
+                  className="mx-auto h-44 w-full object-contain"
+                />
               </div>
-              <p className="mt-4 text-sm font-semibold text-slate-600">
+              <p className="mt-4 text-base font-semibold text-slate-600">
                 Selamat datang di sistem absensi guru.
               </p>
             </div>
