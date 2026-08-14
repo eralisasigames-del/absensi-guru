@@ -1,0 +1,47 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo PAUD Pencarsari</title>
+  <desc id="desc">Logo sekolah PAUD dengan rumah, matahari, buku dan dua anak</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8C8"/>
+      <stop offset="1" stop-color="#DDF7E9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="112" fill="url(#sky)" stroke="#F4C542" stroke-width="8"/>
+  <circle cx="52" cy="52" r="18" fill="#FFD84D"/>
+  <g fill="#FFD84D">
+    <path d="M52 24v-10h4v10zM52 90V80h4v10zM22 54H12v-4h10zM94 54H84v-4h10z"/>
+  </g>
+  <path d="M57 102 120 50l63 52v66H57z" fill="#FFF" stroke="#1565C0" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M48 103 120 42l72 61-10 13-62-52-62 52z" fill="#0B63CE"/>
+  <path d="M120 61 177 110v58H63v-58z" fill="#FFF8D8"/>
+  <rect x="103" y="128" width="34" height="40" rx="3" fill="#66B5E8"/>
+  <path d="M120 128v40M103 148h34" stroke="#FFF" stroke-width="4"/>
+  <text x="120" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#123A68">PAUD</text>
+  <g transform="translate(40 105)">
+    <circle cx="38" cy="31" r="20" fill="#F6B98C"/>
+    <path d="M18 30c1-22 37-28 43-2-10-7-24-8-43 2z" fill="#5B321F"/>
+    <circle cx="31" cy="34" r="2.5" fill="#222"/><circle cx="45" cy="34" r="2.5" fill="#222"/>
+    <path d="M32 43q6 7 12 0" fill="none" stroke="#B34D45" stroke-width="3" stroke-linecap="round"/>
+    <path d="M20 52h36l8 43H12z" fill="#1D74D8"/>
+    <path d="M20 53 7 78M56 53l15 25" stroke="#F6B98C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M27 94 22 113M48 94l5 19" stroke="#183D71" stroke-width="9" stroke-linecap="round"/>
+    <path d="M18 116h13M48 116h13" stroke="#222" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(116 108)">
+    <circle cx="38" cy="28" r="20" fill="#F4B487"/>
+    <path d="M17 28c2-25 38-26 44-2-12-5-27-4-44 2z" fill="#3E261B"/>
+    <path d="M18 23q20-19 40 1" fill="none" stroke="#F0B73E" stroke-width="5"/>
+    <circle cx="31" cy="32" r="2.5" fill="#222"/><circle cx="45" cy="32" r="2.5" fill="#222"/>
+    <path d="M32 41q6 7 12 0" fill="none" stroke="#B34D45" stroke-width="3" stroke-linecap="round"/>
+    <path d="M20 50h36l8 45H12z" fill="#F05B63"/>
+    <path d="M20 52 7 76M56 52l15 24" stroke="#F4B487" stroke-width="10" stroke-linecap="round"/>
+    <path d="M27 95 22 113M48 95l5 18" stroke="#234D82" stroke-width="9" stroke-linecap="round"/>
+    <path d="M18 116h13M48 116h13" stroke="#222" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <path d="M40 184h160" stroke="#42A66B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M72 177c8-12 16-12 24 0M148 177c8-12 16-12 24 0" fill="none" stroke="#42A66B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M120 193h-58" stroke="#EF5B58" stroke-width="28" stroke-linecap="round"/>
+  <path d="M120 193h58" stroke="#EF5B58" stroke-width="28" stroke-linecap="round"/>
+  <text x="120" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="900" fill="#123A68">PENCARSARI</text>
+</svg>
